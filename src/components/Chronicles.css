@@ -39,15 +39,22 @@
 
     padding: 0px 60px 0px 60px;
     width: 60%;
-    height: 30px;
+    height: 35px;
     min-width: 60%;
-    min-height: 30px;
+    min-height: 35px;
     max-width: 60%;
-    max-height: 30px;
+    max-height: 35px;
 
     position: relative;
 
     color: #f2e9e9;
-    background-image: linear-gradient(to right, transparent, black, transparent);
-    /* background-color: transparent; */
+    background-image: radial-gradient( black, transparent);
+    opacity: 85%;
+}
+
+.divider {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    height: 20px;
+    text-align: center;
 }

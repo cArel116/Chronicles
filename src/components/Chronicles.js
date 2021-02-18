@@ -23,7 +23,11 @@ export const Chronicles = () => (
                 </div>
             </section>
         </div>
+
+        {/* Added darkening filter */}
         <div class="darken20">
+
+            {/* NAV */}
             <section class="top-nav">
                 <span class="top-nav-bar">
                     <i class="fas fa-home"></i>
@@ -41,10 +45,14 @@ export const Chronicles = () => (
                     <i class="fas fa-question"></i>
                 </span>
             </section>
+
+            {/* WEATHER & DATE */}
             <section class="weather-date-section">
                 <div class="weather-date-div">
-                    <h2 class="date">February 12, 2021</h2>
-                    <h2 class="temp">47°</h2>
+                    <span class="homepage-heading">
+                        <h2 class="date">February 12, 2021</h2>
+                        <h2 class="temp">47°</h2>
+                    </span>
                 </div>
             </section>
 

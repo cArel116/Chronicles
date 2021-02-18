@@ -30,19 +30,67 @@ export const Chronicles = () => (
             {/* NAV */}
             <section class="top-nav">
                 <span class="top-nav-bar">
-                    <a href="" class="top-nav-icon"><i class="fas fa-home"></i></a>
-                    <a href="" class="top-nav-icon"><i class="fas fa-book"></i></a>
-                    <a href="" class="top-nav-icon"><i class="fas fa-calendar-alt"></i></a>
-                    <a href="" class="top-nav-icon"><i class="fas fa-users"></i></a>
+                    <div class="fa-icon-div">
+                        <a href="" class="top-nav-icon">
+                            <i class="fas fa-home"></i>
+                        </a>
+                    </div>
+                    <div class="fa-icon-div">
+                        <a href="" class="top-nav-icon">
+                            <i class="fas fa-book"></i>
+                        </a>
+                    </div>
+                    <div class="fa-icon-div">
+                        <a href="" class="top-nav-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </a>
+                    </div>
+                    <div class="fa-icon-div">
+                        <a href="" class="top-nav-icon">
+                            <i class="fas fa-users"></i>
+                        </a>
+                    </div>
                     <div class="divider">|</div>
-                    <a href="" class="top-nav-icon"><i class="fas fa-map-marked-alt"></i></a>
-                    <a href="" class="top-nav-icon"><i class="fas fa-feather-alt"></i></a>
-                    <a href="" class="top-nav-icon"><i class="fas fa-mountains"></i></a>
-                    <a href="" class="top-nav-icon"><i class="fas fa-medal"></i></a>
-                    <a href="" class="top-nav-icon"><i class="fas fa-photo-video"></i></a>
-                    <a href="" class="top-nav-icon"><i class="fas fa-envelope"></i></a>
-                    <a href="" class="top-nav-icon"><i class="fas fa-user-cog"></i></a>
-                    <a href="" class="top-nav-icon"><i class="fas fa-question"></i></a>
+                    <div class="fa-icon-div">
+                        <a href="" class="top-nav-icon">
+                            <i class="fas fa-map-marked-alt"></i>
+                        </a>
+                    </div>
+                    <div class="fa-icon-div">
+                        <a href="" class="top-nav-icon">
+                            <i class="fas fa-feather-alt"></i>
+                        </a>
+                    </div>
+                    <div class="fa-icon-div">
+                        <a href="" class="top-nav-icon">
+                            <i class="fas fa-mountains"></i>
+                        </a>
+                    </div>
+                    <div class="fa-icon-div">
+                        <a href="" class="top-nav-icon">
+                            <i class="fas fa-medal"></i>
+                        </a>
+                    </div>
+                    <div class="fa-icon-div">
+                        <a href="" class="top-nav-icon">
+                            <i class="fas fa-photo-video"></i>
+                        </a>
+                    </div>
+                    <div class="fa-icon-div">
+                        <a href="" class="top-nav-icon">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    <div class="fa-icon-div">
+                        <a href="" class="top-nav-icon">
+                            <i class="fas fa-user-cog"></i>
+                        </a>
+                    </div>
+                    <div class="fa-icon-div">
+                        <a href="" class="top-nav-icon">
+                            <i class="fas fa-question"></i>
+                        </a>
+                    </div>
                 </span>
             </section>
 
@@ -59,23 +107,29 @@ export const Chronicles = () => (
             {/* BOTTOM NAV */}
             <section class="bottom-nav">
                 <span class="home-footer">
-                    <a href="">
-                        <div class="footer-nav-radial">
-                            <h3 class="home-footer-nav">Journal</h3>
-                        </div>
-                    </a>
+                    <div class="bottom-nav-heading">
+                        <a href="">
+                            <div class="footer-nav-radial">
+                                <h3 class="home-footer-nav">Journal</h3>
+                            </div>
+                        </a>
+                    </div>
                     <div class="footer-divider">|</div>
-                    <a href="">
-                        <div class="footer-nav-radial">
-                            <h3 class="home-footer-nav">Schedule</h3>
-                        </div>
-                    </a>
+                    <div class="bottom-nav-heading">
+                        <a href="">
+                            <div class="footer-nav-radial">
+                                <h3 class="home-footer-nav">Schedule</h3>
+                            </div>
+                        </a>
+                    </div>
                     <div class="footer-divider">|</div>
-                    <a href="">
-                        <div class="footer-nav-radial">
-                            <h3 class="home-footer-nav">Social</h3>
-                        </div>
-                    </a>
+                    <div class="bottom-nav-heading">
+                        <a href="">
+                            <div class="footer-nav-radial">
+                                <h3 class="home-footer-nav">Social</h3>
+                            </div>
+                        </a>
+                    </div>
                 </span>
             </section>
         </div>

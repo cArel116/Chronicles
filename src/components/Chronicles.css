@@ -7,82 +7,6 @@ h3 {
     margin: 0;
 }
 
-/* DIMMING FILTER AS DIV */
-.darken20 {
-    display: flex;
-    align-self: stretch;
-
-    flex-direction: column;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: flex-start;
-    height: 100%;
-    margin: 0;
-
-    background-color: rgba(0,0,0,0.2);
-}
-
-/* TOP-NAV */
-.top-nav {
-    display: flex;
-    align-self: stretch;
-    align-items: center;
-    justify-content: center;
-
-    margin-top: 60px;
-}
-
-.top-nav-bar {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    position: relative;
-
-    padding: 0px 20px 0px 20px;
-    width: 60%;
-    height: 30px;
-    min-width: 60%;
-    min-height: 30px;
-    max-width: 60%;
-    max-height: 30px;
-
-    position: relative;
-
-    color: #777;
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 8px;  
-}
-
-.fa-icon-div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-}
-
-.top-nav-icon {
-    font-size: 16px;
-    color: #777;
-}
-
-.top-nav-icon:hover {
-    font-size: 18px;
-    color: white;
-}
-
-.top-nav-icon:active {
-    font-size: 16px;
-    color: #777;
-}
-
-.divider {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    height: 20px;
-    text-align: center;
-}
-
 /* WEATHER & DATE */
 .weather-date-section {
     align-self: stretch;
@@ -171,7 +95,7 @@ h3 {
 
     width: 100%;
     margin-bottom: 70px;
-    max-width: 60%;
+    max-width: 80%;
 }
 
 
@@ -200,6 +124,7 @@ h3 {
     font-weight: 500;    
     font-size: 26px;
     line-height: 36px;
+    letter-spacing: 2px;;
 }
 
 .footer-divider {

@@ -2,7 +2,8 @@ import React from "react"
 import { Route } from "react-router-dom"
 import { Home } from "./Home"
 import { Journal } from "./journal/Journal"
-import { JournalEntry } from "./journal/JournalEntry"
+import { JournalEntryList } from "./journal/JournalEntryList"
+import { JournalEntryProvider } from "./journal/JournalEntryProvider"
 
 export const ApplicationViews = () => {
     return (
@@ -13,14 +14,16 @@ export const ApplicationViews = () => {
             </Route>
 
             {/* Render the journal page when http://localhost:3000/journal */}
-            <Route path="/entries">
+            <Route path="/journal">
                 <Journal />
             </Route>
 
             {/* Render the entry list when http://localhost:3000/entries */}
-            <Route path="/entries">
-                <JournalEntry />
-            </Route>
+            <JournalEntryProvider>
+                <Route exact path="/entries">
+                    <JournalEntryList />
+                </Route>
+            </JournalEntryProvider>
         </>
     )
 }

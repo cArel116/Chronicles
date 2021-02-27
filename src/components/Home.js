@@ -45,7 +45,7 @@ export const Home = () => (
                 </div>
                 <div className="footer-divider">|</div>
                 <div className="bottom-nav-heading">
-                    <Link to="">
+                    <Link to="/schedule">
                         <div className="footer-nav-radial">
                             <h3 className="home-footer-nav">Schedule</h3>
                         </div>
@@ -53,7 +53,7 @@ export const Home = () => (
                 </div>
                 <div className="footer-divider">|</div>
                 <div className="bottom-nav-heading">
-                    <Link to="">
+                    <Link to="social">
                         <div className="footer-nav-radial">
                             <h3 className="home-footer-nav">Social</h3>
                         </div>

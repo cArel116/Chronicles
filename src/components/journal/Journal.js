@@ -1,6 +1,6 @@
-import React from "react"
-import "./Journal.css"
-import "../../assets/css/all.css"
+import React from "react";
+import "./Journal.css";
+import "../../assets/css/all.css";
 
 export const Journal = () => {
     <>
@@ -22,5 +22,8 @@ export const Journal = () => {
                 </div>
             </section>
         </div>
+        <section className="journal-main-section">
+
+        </section>
     </>
 }

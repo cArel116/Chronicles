@@ -14,7 +14,7 @@ export const ApplicationViews = () => {
             </Route>
 
             {/* Render the journal page when http://localhost:3000/journal */}
-            <Route path="/journal">
+            <Route exact path="/journal">
                 <Journal />
             </Route>
 

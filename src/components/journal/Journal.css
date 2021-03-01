@@ -2,3 +2,109 @@
     display: flex;
     flex-direction: column;
 }
+
+
+/* MODAL */
+.modalWrapper {
+    display: flex;
+    align-self: stretch;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    
+    background-color: rgba(0,0,0,0.8);
+}
+
+.journalOpen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    padding: 10px;
+    
+    min-width: 100vh;
+    min-height: 70vh;
+    max-width: 100vh;
+    max-height: 70vh;
+    width: 100vh;
+    height: 70vh;
+
+    border-radius: 10px;
+
+    background-image: url("../../images/Journal_Open.jpg");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* .pages-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 100%;
+} */
+
+.journal-page-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+
+    width: 50%;
+    height: 100%;
+
+    /* padding: 30px 20px 30px 30px; */
+}
+
+.journal-page-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+
+    width: 50%;
+    height: 100%;
+
+    /* padding: 30px 30px 30px 20px; */
+}
+
+.journal-page-footer-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    /* padding: 0 30px 0 10px; */
+    width: 100%;
+}
+
+.journal-page-footer-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+    /* padding: 0 10px 0 30px; */
+    width: 100%;
+}
+
+.journal-button {
+    background-color: transparent;
+    border-style: none;
+    font-family: Planewalker;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.journal-page-number {
+    font-family: Planewalker;
+    font-size: 20px;
+}

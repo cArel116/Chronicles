@@ -4,7 +4,7 @@
 }
 
 
-/* MODAL */
+/* ------------------- JOURNAL MODAL --------------------- */
 .modalWrapper {
     display: flex;
     align-self: stretch;
@@ -107,4 +107,102 @@
 .journal-page-number {
     font-family: Planewalker;
     font-size: 20px;
+}
+
+
+/* ------------------- JOURNAL MAIN PAGE ----------------------- */
+.journal-main-section {
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    max-width: 100%;
+    max-height: 100%;
+
+    width: 100%;
+    height: 100%;
+}
+
+.journal-categories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.journal-cat-left {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+
+    background-color: transparent;
+}
+
+.journal-cat-right {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+
+    background-color: transparent;
+}
+
+.journal-cat-adventures {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 10px;
+    padding: 20px 0px;
+
+    width: 400px;
+    height: 200px;
+    min-width: 300px;
+    min-height: 100px;
+
+    background-color: black;
+    border-radius: 10px;
+}
+
+.journal-cat-journal {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 10px;
+    padding: 20px 0px;
+
+    width: 400px;
+    height: 300px;
+    min-width: 300px;
+    min-height: 100px;
+
+    background-color: black;
+    border-radius: 10px;
+}
+
+.journal-cat-goalsAndAchievements {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 0px;
+
+    width: 400px;
+    height: 560px;
+    min-width: 300px;
+    min-height: 100px;
+
+    background-color: black;
+    border-radius: 10px;
 }

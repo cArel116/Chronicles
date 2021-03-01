@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { JournalModal } from '../components/journal/JournalEntryModal';
+import '../components/journal/Journal.css';
 
 export const JournalModalContainer = () => {
 
@@ -10,7 +11,7 @@ export const JournalModalContainer = () => {
     };
 
     const closeModal = e => {
-        if (e.target.id == "modal") {
+        if (e.target.id === "modal") {
             toggleModal();
         }
     };

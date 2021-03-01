@@ -7,8 +7,8 @@ import "../assets/css/all.css"
 
 export const Chronicles = () => (
     <>
-        <JournalModalContainer />
         <NavBar />
         <ApplicationViews />
+        <JournalModalContainer />
     </>
 )

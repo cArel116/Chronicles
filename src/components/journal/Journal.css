@@ -154,6 +154,36 @@
     background-color: transparent;
 }
 
+.journal-cat-darken15 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.15);
+}
+
+.journal-h2-button {
+    font-family: 'Vollkorn SC', serif;
+    font-size: 28px;
+    color: #f2e9e9;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.journal-h2-button:hover {
+    font-size: 30px;
+    color: white;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.journal-h2-button:active {
+    font-size: 28px;
+    color: #f2e9e9;
+}
+
 .journal-cat-adventures {
     display: flex;
     align-self: center;
@@ -170,6 +200,15 @@
 
     background-color: black;
     border-radius: 10px;
+}
+
+.adventures-pic-div {
+    width: 100%;
+    height: 100%;
+
+    background-image: url("../../images/map3_vignette75.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .journal-cat-journal {

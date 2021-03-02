@@ -15,10 +15,25 @@ export const Journal = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="journal-cat-journal"></div>
+                    <div className="journal-cat-journal">
+                        <div className="journal-pic-div">
+                            <div className="journal-cat-darken15">
+                                <Link className="journal-h2-button" to="">Journal</Link>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div className="journal-cat-right">
-                    <div className="journal-cat-goalsAndAchievements"></div>
+                    <div className="journal-cat-achievements">
+                        <div className="achievements-pic-div">
+                            <div className="journal-cat-darken15">
+                                <Link className="journal-h2-button" to="/achievements">
+                                    <p className="goals-p">Goals &</p>
+                                    <p className="achievements-p">Achievements</p>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

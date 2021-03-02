@@ -7,5 +7,5 @@ export const JournalEntry = ({ entry }) => (
         <div>
             <p className="entry">{entry.text}</p>
         </div>
-    </section>
+    </section >
 )

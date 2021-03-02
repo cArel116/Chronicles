@@ -67,6 +67,11 @@ export const NavBar = (props) => {
                         <i className="fas fa-question"></i>
                     </Link>
                 </li>
+                <li className="fa-icon-li">
+                    <Link className="top-nav-icon" to="">
+                        <i class="fas fa-sign-out"></i>
+                    </Link>
+                </li>
             </ul>
         </section>
     )

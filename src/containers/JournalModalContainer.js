@@ -4,7 +4,7 @@ import '../components/journal/Journal.css';
 
 export const JournalModalContainer = () => {
 
-    const [showModal, setShowModal] = useState(true);
+    const [showModal, setShowModal] = useState(false);
 
     const toggleModal = () => {
         setShowModal(!showModal);

@@ -13,13 +13,13 @@ export const JournalEntryProvider = (props) => {
             .then(setEntries)
     }
 
-    const addEntry = entryObj => {
+    const addEntry = entry => {
         return fetch("http://localhost:8088/entries", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(entryObj)
+            body: JSON.stringify(entry)
         })
             .then(getEntries)
     }

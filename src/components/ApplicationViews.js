@@ -2,6 +2,7 @@ import React from "react"
 import { Route } from "react-router-dom"
 import { Home } from "./Home"
 import { Journal } from "./journal/Journal"
+import { JournalEntryForm } from "./journal/JournalEntryForm"
 import { JournalEntryList } from "./journal/JournalEntryList"
 import { JournalEntryProvider } from "./journal/JournalEntryProvider"
 
@@ -22,6 +23,12 @@ export const ApplicationViews = () => {
             <JournalEntryProvider>
                 <Route exact path="/entries">
                     <JournalEntryList />
+                </Route>
+            </JournalEntryProvider>
+
+            <JournalEntryProvider>
+                <Route exact path="/entries/create">
+                    <JournalEntryForm />
                 </Route>
             </JournalEntryProvider>
         </>

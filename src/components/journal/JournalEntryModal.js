@@ -5,11 +5,6 @@ export const JournalModal = ({ toggleModal, closeModal }) => {
     return (
         <div id="modal" className="modalWrapper" onClick={closeModal}>
             <section className="journalOpen">
-
-                {/* <h1>Modal!!!</h1>
-                        <p>journal wooooooow</p>
-                        <span className="close" onClick={toggleModal}>x</span> */}
-
                 <div className="journal-page-left">
                     <div className="journal-page-footer-left">
                         <button className="journal-button">Options</button>

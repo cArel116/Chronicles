@@ -21,8 +21,10 @@ export const JournalEntryList = () => {
     return (
         <>
 
-            <button className="newEntry" onClick={() => { history.push("/entries/create") }}>
-                <i class="fas fa-plus-square"></i>
+            <button className="newEntry-tooltip" onClick={() => { history.push("/entries/create") }}>
+                <i class="fas fa-plus-square">
+                    <span class="tooltiptext">Add Entry</span>
+                </i>
             </button>
 
             <div className="entries">

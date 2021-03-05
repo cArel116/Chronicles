@@ -3,6 +3,27 @@
     flex-direction: column;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: transparent;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(85,85,85,.5);
+    opacity: 50%;
+  }
+
 
 /* ------------------- JOURNAL MODAL --------------------- */
 .modalWrapper {
@@ -100,21 +121,14 @@
     font-size: 20px;
 }
 
-/* .entries {
+.entries {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-    position: fixed;
+    overflow: scroll;
+    overflow-x: hidden;
+}
 
-    min-width: 100%;
-    min-height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-} */
-
-.newEntry {
+.newEntry-tooltip {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -122,7 +136,47 @@
     margin: 0;
     border: none;
     background-color: transparent;
+    cursor: pointer;
 }
+
+/* Tooltip container */
+.newEntry-tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Tooltip text */
+  .newEntry-tooltip .tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: rgba(0,0,0,.5);
+    color: #f2e9e9;
+    font-family: Planewalker;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 130%;
+  }
+
+  .newEntry-tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .newEntry-tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
 
 .fa-plus-square::before {
     font-size: 16px;
@@ -138,7 +192,7 @@
     align-items: center;
     justify-content: center;
     
-    width: 500px;
+    width: 32em;
     text-align: justify;
 
     padding: 10px;
@@ -152,6 +206,7 @@
 .entry {
     font-family: Planewalker;
     color: #f2e9e9;
+    padding: 0px 10px 0px 0px;
 }
 
 /* ------------------- JOURNAL MAIN PAGE ----------------------- */

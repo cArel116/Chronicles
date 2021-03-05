@@ -7,8 +7,8 @@ export const Home = () => (
         <section className="weather-date-section">
             <div className="weather-date-div">
                 <span className="homepage-heading">
-                    <h2 className="date">February 12, 2021</h2>
-                    <h2 className="temp">47°</h2>
+                    <h2 className="date">March 4, 2021</h2>
+                    <h2 className="temp">58°</h2>
                 </span>
             </div>
         </section>

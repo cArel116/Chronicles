@@ -1,0 +1,219 @@
+.chronicles-h1 {
+    font-family: Vollkorn SC;
+    /* text-decoration: underline; */
+    text-align: center;
+    font-size: 72px;
+    letter-spacing: 8px;
+    color: #f2e9e9;
+    font-weight: 400;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1rem;
+    font-family: Vollkorn SC;
+    letter-spacing: 2px;
+    color: #f2e9e9;
+    font-weight: 400;
+}
+
+fieldset {
+    display: flex;
+    align-items: center;    
+    justify-content: center;
+    min-width: 0;
+    padding: 1rem 0;
+    margin: 0;
+    border: 0;
+    width: 100%;
+}
+
+.form--login > fieldset > input[type="email"],
+.form--login > fieldset > input[type="password"] {
+    width: 20em;
+}
+
+/* .label--login {
+    width: 8rem;
+    display: inline-block;
+} */
+
+.form-control {
+    display: block;
+    width: 20em;
+    /* height: calc(1.5em + .75rem + 2px); */
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-family: Vollkorn SC;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #f2e9e9;
+    /* background-clip: padding-box; */
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.container--login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.form--login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-position-x: right;
+    z-index: 1;
+    min-height: 25rem;
+    min-width: 45rem;
+    background-color: transparent;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+}
+
+.button--close {
+    position: relative;
+    bottom: -2rem;
+    background-color: transparent;
+    margin-bottom: 2em;
+    /* color: #f2e9e9; */
+    font-family: Vollkorn SC;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.button--close:hover {
+    text-decoration: underline;
+}
+
+.dialog {
+    /* background-color: rgba(0,0,0,.90); */
+    border-radius: 8px;
+    min-width: 15rem;
+    min-height: 5rem;
+}
+
+.registration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3em;
+}
+
+.register-account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Vollkorn SC;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    margin: none;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.link--register {
+    font-family: Vollkorn SC;
+    font-size: 16px;
+    color: #f2e9e9;
+    /* width: 100%;
+    height: 100%; */
+    text-align: center;
+    padding-left: .35em;
+}
+
+.link--register:hover {
+    font-family: Vollkorn SC;
+    text-decoration: underline;
+    /* font-size: 18px; */
+    color: #f2e9e9;
+}
+
+/* .link--register:active {
+    font-family: Vollkorn SC;
+    font-size: 16px;
+    color: #f2e9e9;
+    text-align: center;
+} */
+
+.login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 4em;
+    width: 4em;
+    padding: none;
+    margin-top: 1em;
+}
+
+.fa-sign-in-alt::before {
+    font-size: 32px;
+    color: #f2e9e9;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fa-sign-in-alt:hover::before {
+    font-size: 36px;
+    color: white;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.fa-sign-in-alt:active::before {
+    font-size: 32px;
+    color: #f2e9e9;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* REGISTRATION */
+.registration-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.form--register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 500px;
+}
+
+.register-h3 {
+    text-align: center;
+    font-family: Vollkorn SC;
+    font-size: 32px;
+    letter-spacing: 2px;
+    color: #f2e9e9;
+    font-weight: 400;
+}
+
+.account-exists-popup {
+    font-family: Vollkorn SC;
+}

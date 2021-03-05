@@ -52,11 +52,10 @@ export const Login = props => {
                             <Link to="/register" className="link--register">here</Link>.
                         </div>
                     </section>
-                    <fieldset>
-                        <button type="submit" className="login-button">
-                            <i class="fas fa-sign-in-alt"></i>
-                        </button>
-                    </fieldset>
+
+                    <button type="submit" className="login-button">
+                        <i class="fas fa-sign-in-alt"></i>
+                    </button>
                 </form>
             </section>
         </main>

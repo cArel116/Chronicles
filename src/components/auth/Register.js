@@ -52,20 +52,20 @@ export const Register = (props) => {
         <main className="registration-main">
 
             <dialog className="dialog dialog--password" ref={conflictDialog}>
-                <div>Account with that email address already exists.</div>
+                <div className="account-exists-popup">Account with that email address already exists.</div>
                 <button className="button--close" onClick={e => conflictDialog.current.close()}>Close</button>
             </dialog>
 
             <form className="form--register" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register for Chronicles</h1>
+                <h1 className="h3 mb-3 font-weight-normal register-h3">Register for Chronicles</h1>
                 <fieldset>
-                    <input ref={firstName} type="text" name="firstName" className="form-control" placeholder="First name" required autoFocus />
+                    <input ref={firstName} type="text" name="firstName" className="form-control" placeholder="First Name" required autoFocus />
                 </fieldset>
                 <fieldset>
-                    <input ref={lastName} type="text" name="lastName" className="form-control" placeholder="Last name" required />
+                    <input ref={lastName} type="text" name="lastName" className="form-control" placeholder="Last Name" required />
                 </fieldset>
                 <fieldset>
-                    <input ref={email} type="email" name="email" className="form-control" placeholder="Email address" required />
+                    <input ref={email} type="email" name="email" className="form-control" placeholder="Email Address" required />
                 </fieldset>
 
                 <button type="submit" className="login-button">

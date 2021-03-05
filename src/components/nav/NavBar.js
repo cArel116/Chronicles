@@ -68,7 +68,7 @@ export const NavBar = (props) => {
                     </Link>
                 </li>
                 <li className="fa-icon-li">
-                    <Link className="top-nav-icon" to="">
+                    <Link onClick={e => localStorage.clear()} className="top-nav-icon" to="/login">
                         <i class="fas fa-sign-out"></i>
                     </Link>
                 </li>

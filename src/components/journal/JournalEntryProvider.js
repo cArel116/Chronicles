@@ -29,6 +29,13 @@ export const JournalEntryProvider = (props) => {
             .then(res => res.json())
     }
 
+    const deleteEntry = entryId => {
+        return fetch(`http://localhost:8088/entries/${entryId}`, {
+            method: "DELETE"
+        })
+            .then(getEntries)
+    }
+
     /*
         Return a context provider which has the
         `entries` state, `getEntries` function,
@@ -37,7 +44,7 @@ export const JournalEntryProvider = (props) => {
     */
     return (
         <EntryContext.Provider value={{
-            entries, getEntries, addEntry, getEntryById
+            entries, getEntries, addEntry, getEntryById, deleteEntry
         }}>
             {props.children}
         </EntryContext.Provider>

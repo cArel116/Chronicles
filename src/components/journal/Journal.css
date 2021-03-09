@@ -15,7 +15,7 @@
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: transparent;
+    background: rgba(85,85,85,.1);
   }
   
   /* Handle on hover */
@@ -234,6 +234,30 @@
     height: 100%;
 }
 
+/* .fa-plus-square::before:hover {
+    font-size: 18px;
+    color: white;
+} */
+
+.fa-trash-alt::before {
+    font-size: 18px;
+    color: #f2e9e9;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.journal-entry-delete-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 .journal-entry {
     display: flex;
     flex-direction: column;
@@ -250,6 +274,7 @@
 a.entry-title-link:link {
     font-family: Planewalker;
     color: #f2e9e9;
+    font-size: 20px;
 }
 
 a.entry-title-link:visited {
@@ -260,12 +285,13 @@ a.entry-title-link:visited {
 a.entry-title-link:hover {
     font-family: Planewalker;
     color: white;
-    font-size: 20px;
+    font-size: 22px;
 }
 
 a.entry-title-link:active {
     font-family: Planewalker;
-    color: #777;
+    color: white;
+    font-size: 20px;
 }
 
 .entry {

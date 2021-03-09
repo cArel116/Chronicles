@@ -1,10 +1,11 @@
 import React from "react"
 import { Route } from "react-router-dom"
 import { Home } from "./Home"
-import { Journal } from "./journal/Journal"
+import { Journal } from "./journal/JournalMain"
 import { JournalEntryForm } from "./journal/JournalEntryForm"
 import { JournalEntryList } from "./journal/JournalEntryList"
 import { JournalEntryProvider } from "./journal/JournalEntryProvider"
+import { JournalEntryDetail } from "./journal/JournalEntryDetail"
 
 export const ApplicationViews = () => {
     return (
@@ -24,11 +25,11 @@ export const ApplicationViews = () => {
                 <Route exact path="/entries">
                     <JournalEntryList />
                 </Route>
-            </JournalEntryProvider>
-
-            <JournalEntryProvider>
                 <Route exact path="/entries/create">
                     <JournalEntryForm />
+                </Route>
+                <Route exact path="/entries/detail/:entryId(\d+)">
+                    <JournalEntryDetail />
                 </Route>
             </JournalEntryProvider>
         </>

@@ -1,8 +1,8 @@
 import React, { useContext, useEffect } from "react"
 import { EntryContext } from "./JournalEntryProvider"
 import { JournalEntry } from "./JournalEntry"
-import "./Journal.css"
 import { useHistory } from "react-router-dom"
+import "./Journal.css"
 
 export const JournalEntryList = () => {
     // This state changes when `getEntries()` is invoked below
@@ -10,11 +10,9 @@ export const JournalEntryList = () => {
 
     const history = useHistory()
 
-    //useEffect - reach out to the world for something
+    // Initialization effect hook -> Go get entry data
     useEffect(() => {
-        console.log("JournalEntryList: useEffect - getEntries")
         getEntries()
-
     }, [])
 
 
@@ -23,7 +21,7 @@ export const JournalEntryList = () => {
 
             <button className="newEntry-tooltip" onClick={() => { history.push("/entries/create") }}>
                 <i class="fas fa-plus-square">
-                    <span class="tooltiptext">Add Entry</span>
+                    <span className="tooltiptext">Add Entry</span>
                 </i>
             </button>
 

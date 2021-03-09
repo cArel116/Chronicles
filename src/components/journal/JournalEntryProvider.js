@@ -24,6 +24,11 @@ export const JournalEntryProvider = (props) => {
             .then(getEntries)
     }
 
+    const getEntryById = (id) => {
+        return fetch(`http://localhost:8088/entries/${id}`)
+            .then(res => res.json())
+    }
+
     /*
         Return a context provider which has the
         `entries` state, `getEntries` function,
@@ -32,7 +37,7 @@ export const JournalEntryProvider = (props) => {
     */
     return (
         <EntryContext.Provider value={{
-            entries, getEntries, addEntry
+            entries, getEntries, addEntry, getEntryById
         }}>
             {props.children}
         </EntryContext.Provider>

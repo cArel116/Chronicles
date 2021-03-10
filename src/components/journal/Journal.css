@@ -1,28 +1,25 @@
-.journal-entry {
-    display: flex;
-    flex-direction: column;
-}
-
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-  }
+}
   
-  /* Track */
-  ::-webkit-scrollbar-track {
+/* Track */
+::-webkit-scrollbar-track {
     background: transparent;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: rgba(85,85,85,.1);
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: rgba(85,85,85,.5);
     opacity: 50%;
-  }
+    cursor: pointer;
+}
 
 
 /* ------------------- JOURNAL MODAL --------------------- */
@@ -126,7 +123,7 @@
     flex-direction: column;
     overflow: scroll;
     overflow-x: hidden;
-    margin-top: 1em;
+    margin-top: 2em;
 }
 
 .newEntry-tooltip {
@@ -134,117 +131,11 @@
     align-items: center;
     justify-content: center;
     padding: 0;
-    margin: 1em 0 0 0;
+    /* margin: 1em 0 0 0; */
     border: none;
     background-color: transparent;
     cursor: pointer;
 }
-
-.search-add-entry-div {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 200px;
-    margin-top: 1em;
-}
-
-.input--wide {
-    margin: 1em 1em 0 0;
-    border-radius: 4px;
-    border: none;
-    padding: 4px 8px;
-    width: 200px;
-    font-family: Planewalker;
-}
-
-/* Tooltip container */
-.newEntry-tooltip {
-    position: relative;
-    display: inline-block;
-  }
-  
-  /* Tooltip text */
-  .newEntry-tooltip .tooltiptext {
-    visibility: hidden;
-    width: 100px;
-    background-color: rgba(0,0,0,.5);
-    color: #f2e9e9;
-    font-family: Planewalker;
-    font-size: 18px;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-   
-    position: absolute;
-    z-index: 1;
-    top: -5px;
-    left: 130%;
-  }
-
-  .newEntry-tooltip .tooltiptext::after {
-    content: " ";
-    position: absolute;
-    top: 50%;
-    right: 100%; /* To the left of the tooltip */
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent black transparent transparent;
-  }
-  
-  /* Show the tooltip text when you mouse over the tooltip container */
-  .newEntry-tooltip:hover .tooltiptext {
-    visibility: visible;
-  }
-  
-  .entry-title {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: Planewalker;
-      font-size: 20px;
-      color: #f2e9e9;
-      text-shadow: 2px 2px 5px #000;
-      height: 40px
-  }
-
-  .entry-title-tooltip {
-    position: relative;
-    display: inline-block;
-  }
-
-  .entry-title-tooltip .tooltiptext {
-    visibility: hidden;
-    width: 80px;
-    background-color: rgba(0,0,0,.5);
-    color: #f2e9e9;
-    font-family: Planewalker;
-    font-size: 18px;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-   
-    position: absolute;
-    z-index: 1;
-    top: -5px;
-    left: 101%;
-  }
-
-  .entry-title-tooltip .tooltiptext::after {
-    content: " ";
-    position: absolute;
-    top: 50%;
-    right: 100%; /* To the left of the tooltip */
-    margin-top: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent black transparent transparent;
-  }
-  
-  /* Show the tooltip text when you mouse over the tooltip container */
-  .entry-title-tooltip:hover .tooltiptext {
-    visibility: visible;
-  }
 
 .fa-plus-square::before {
     font-size: 18px;
@@ -254,35 +145,171 @@
     height: 100%;
 }
 
+.search-add-entry-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-width: 300px;
+    margin-top: 2em;
+}
+
+.input--wide {
+    /* margin: 1em 0 0 0; */
+    border-radius: 4px;
+    border: none;
+    padding: 4px 8px 2px;
+    width: 200px;
+    font-family: Planewalker;
+    font-size: 18px;
+}
+
+/* Tooltip container */
+.newEntry-tooltip {
+    position: relative;
+    display: inline-block;
+}
+  
+/* Tooltip text */
+.newEntry-tooltip .tooltiptext {
+    visibility: hidden;
+    width: 100px;
+    background-color: rgba(0,0,0,.5);
+    color: #f2e9e9;
+    font-family: Planewalker;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 130%;
+}
+
+.newEntry-tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.newEntry-tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.entry-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Planewalker;
+    font-size: 24px;
+    font-weight: 500;
+    color: #f2e9e9;
+    text-shadow: 2px 2px 5px #000;
+    height: 40px
+}
+
+a.entry-title-link:link {
+    font-family: Planewalker;
+    color: #f2e9e9;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+a.entry-title-link:visited {
+    font-family: Planewalker;
+    color: #777;
+}
+
+a.entry-title-link:hover {
+    font-family: Planewalker;
+    color: white;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+a.entry-title-link:active {
+    font-family: Planewalker;
+    color: white;
+    font-size: 24px;
+}
+
+.entry-title-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.entry-title-tooltip .tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: rgba(0,0,0,.5);
+    color: #f2e9e9;
+    font-family: Planewalker;
+    font-size: 18px;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 101%;
+}
+
+.entry-title-tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    right: 100%; /* To the left of the tooltip */
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.entry-title-tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.entry {
+    font-family: Planewalker;
+    font-size: 20px;
+    font-weight: 400;
+    color: #f2e9e9;
+    padding: 0px 10px 0px 0px;
+    text-shadow: 2px 2px 5px #000;
+    margin-bottom: 1em;
+}
+
 /* .fa-plus-square::before:hover {
     font-size: 18px;
     color: white;
 } */
 
-.fa-trash-alt::before {
-    font-size: 18px;
-    color: #f2e9e9;
-    margin: 0;
-    width: 100%;
-    height: 100%;
-}
-
 .edit-delete-journal-entry {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 200px;
+    min-width: 300px;
 }
 
 .journal-entry-edit-button {
     background-color: rgba(0,0,0,.5);
     border: none;
+    border-radius: 4px;
     font-family: Planewalker;
     color: #f2e9e9;
     font-size: 18px;
     padding: 0;
     cursor: pointer;
-    width: 70px;
+    width: 75px;
     max-width: 100px;
     height: 40px;
 }
@@ -301,22 +328,15 @@
 }
 
 .journal-entry-delete-button {
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    border: none;
-    background-color: transparent;
-    cursor: pointer; */
     background-color: rgba(0,0,0,.5);
     border: none;
+    border-radius: 4px;
     font-family: Planewalker;
     color: #f2e9e9;
     font-size: 18px;
     padding: 0;
     cursor: pointer;
-    width: 70px;
+    width: 75px;
     max-width: 100px;
     height: 40px;
 }
@@ -328,6 +348,36 @@
 }
 
 .journal-entry-delete-button:active {
+    color: #f2e9e9;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+}
+
+.journal-entry-close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,.5);
+    border: none;
+    border-radius: 4px;
+    font-family: Planewalker;
+    color: #f2e9e9;
+    font-size: 18px;
+    align-content: center;
+    cursor: pointer;
+    width: 75px;
+    max-width: 100px;
+    height: 40px;
+}
+
+.journal-entry-close-button:hover {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.journal-entry-close-button:active {
     color: #f2e9e9;
     font-size: 18px;
     font-weight: 400;
@@ -346,38 +396,17 @@
     padding: 10px;
 }
 
+.journal-entry-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    width: 32em;
+    text-align: justify;
 
-a.entry-title-link:link {
-    font-family: Planewalker;
-    color: #f2e9e9;
-    font-size: 20px;
-}
-
-a.entry-title-link:visited {
-    font-family: Planewalker;
-    color: #777;
-}
-
-a.entry-title-link:hover {
-    font-family: Planewalker;
-    color: white;
-    font-size: 22px;
-    font-weight: 400;
-}
-
-a.entry-title-link:active {
-    font-family: Planewalker;
-    color: white;
-    font-size: 20px;
-}
-
-.entry {
-    font-family: Planewalker;
-    font-size: 18px;
-    color: #f2e9e9;
-    padding: 0px 10px 0px 0px;
-    text-shadow: 2px 2px 5px #000;
-    margin-bottom: 1em;
+    padding: 10px;
+    margin-top: 2em;
 }
 
 /* ------------------JOURNAL ENTRY FORM---------------------- */
@@ -385,23 +414,38 @@ a.entry-title-link:active {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     margin-top: 1em;
-}
-
-.journal-entry-text-field {
-    min-height: 200px;
-    min-width: 400px;
-    margin-bottom: 1em;
+    min-width: 600px;
 }
 
 .journal-entry-title-field {
     min-width: 400px;
+    /* background-color: rgba(0,0,0,.75); */
+    font-family: Planewalker;
+    font-size: 20px;
+    /* color: #f2e9e9; */
+    border-color: black;
+}
+
+.journal-entry-text-field {
+    font-family: Planewalker;
+    font-size: 20px;
+    font-weight: 400;
+    /* color: #f2e9e9; */
+    padding: 10px;
+    margin-bottom: 1em;
+    min-height: 400px;
+    min-width: 400px;
+    /* background-color: rgba(0,0,0,.75); */
+    /* text-align: justify; */
+    border-color: black;
 }
 
 .journal-entry-save {
     background-color: rgba(0,0,0,.5);
     border: none;
+    border-radius: 4px;
     font-family: Planewalker;
     color: #f2e9e9;
     font-size: 20px;
@@ -410,6 +454,7 @@ a.entry-title-link:active {
     width: 75px;
     max-width: 100px;
     height: 40px;
+    text-shadow: 2px 2px 5px #000;
 }
 
 .journal-entry-save:hover {
@@ -424,6 +469,14 @@ a.entry-title-link:active {
     font-weight: 400;
     border: none;
 }
+
+.save-close-button-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    min-width: 200px;
+}
+
 
 /* ------------------- JOURNAL MAIN PAGE ----------------------- */
 .journal-main-section {

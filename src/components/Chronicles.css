@@ -107,12 +107,13 @@ h3 {
     font-size: 28px;
     line-height: 36px;
     letter-spacing: 2px;;
+    text-shadow: 2px 2px 5px #000;
 }
 
 .home-footer-nav:hover {
     font-size: 30px;
     color: white;
-    text-shadow: 2px 2px 5px #000;
+    text-shadow: 4px 2px 5px #000;
 }
 
 .home-footer-nav:active {

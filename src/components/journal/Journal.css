@@ -140,6 +140,23 @@
     cursor: pointer;
 }
 
+.search-add-entry-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+    margin-top: 1em;
+}
+
+.input--wide {
+    margin: 1em 1em 0 0;
+    border-radius: 4px;
+    border: none;
+    padding: 4px 8px;
+    width: 200px;
+    font-family: Planewalker;
+}
+
 /* Tooltip container */
 .newEntry-tooltip {
     position: relative;
@@ -185,6 +202,7 @@
       align-items: center;
       justify-content: center;
       font-family: Planewalker;
+      font-size: 20px;
       color: #f2e9e9;
       text-shadow: 2px 2px 5px #000;
       height: 40px
@@ -249,6 +267,39 @@
     height: 100%;
 }
 
+.edit-delete-journal-entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+}
+
+.journal-entry-edit-button {
+    background-color: rgba(0,0,0,.5);
+    border: none;
+    font-family: Planewalker;
+    color: #f2e9e9;
+    font-size: 18px;
+    padding: 0;
+    cursor: pointer;
+    width: 70px;
+    max-width: 100px;
+    height: 40px;
+}
+
+.journal-entry-edit-button:hover {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.journal-entry-edit-button:active {
+    color: #f2e9e9;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+}
+
 .journal-entry-delete-button {
     /* display: flex;
     align-items: center;
@@ -262,23 +313,23 @@
     border: none;
     font-family: Planewalker;
     color: #f2e9e9;
-    font-size: 20px;
+    font-size: 18px;
     padding: 0;
     cursor: pointer;
-    width: 75px;
+    width: 70px;
     max-width: 100px;
     height: 40px;
 }
 
 .journal-entry-delete-button:hover {
     color: white;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 400;
 }
 
 .journal-entry-delete-button:active {
     color: #f2e9e9;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
     border: none;
 }
@@ -341,6 +392,7 @@ a.entry-title-link:active {
 .journal-entry-text-field {
     min-height: 200px;
     min-width: 400px;
+    margin-bottom: 1em;
 }
 
 .journal-entry-title-field {

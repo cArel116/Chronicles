@@ -6,6 +6,7 @@ export const EntryContext = createContext()
 // This component establishes what data can be used.
 export const JournalEntryProvider = (props) => {
     const [entries, setEntries] = useState([])
+    const [searchTerms, setSearchTerms] = useState("")
 
     const getEntries = () => {
         return fetch("http://localhost:8088/entries")
@@ -36,6 +37,17 @@ export const JournalEntryProvider = (props) => {
             .then(getEntries)
     }
 
+    const editEntry = entry => {
+        return fetch(`http://localhost:8088/entries/${entry.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(entry)
+        })
+            .then(getEntries)
+    }
+
     /*
         Return a context provider which has the
         `entries` state, `getEntries` function,
@@ -44,7 +56,7 @@ export const JournalEntryProvider = (props) => {
     */
     return (
         <EntryContext.Provider value={{
-            entries, getEntries, addEntry, getEntryById, deleteEntry
+            entries, getEntries, addEntry, getEntryById, deleteEntry, editEntry, searchTerms, setSearchTerms
         }}>
             {props.children}
         </EntryContext.Provider>

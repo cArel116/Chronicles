@@ -6,7 +6,7 @@ export const Register = (props) => {
     const firstName = useRef()
     const lastName = useRef()
     const email = useRef()
-    const verifyPassword = useRef()
+    // const verifyPassword = useRef()
     const conflictDialog = useRef()
     const history = useHistory()
 
@@ -37,7 +37,7 @@ export const Register = (props) => {
                         .then(createdUser => {
                             if (createdUser.hasOwnProperty("id")) {
                                 localStorage.setItem("chronicles_adventurer", createdUser.id)
-                                history.push("/")
+                                history.push("/login")
                             }
                         })
                 }

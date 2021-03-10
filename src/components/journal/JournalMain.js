@@ -18,7 +18,7 @@ export const Journal = () => {
                     <div className="journal-cat-journal">
                         <div className="journal-pic-div">
                             <div className="journal-cat-darken15">
-                                <Link className="journal-h2-button" to="">Journal</Link>
+                                <Link className="journal-h2-button" to="/entries">Journal</Link>
                             </div>
                         </div>
                     </div>

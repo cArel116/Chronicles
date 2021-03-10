@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react"
 import { EntryContext } from "./JournalEntryProvider"
-import { useParams, useHistory } from "react-router-dom"
+import { useParams, useHistory, Link } from "react-router-dom"
 import "./Journal.css"
 
 export const JournalEntryDetail = () => {
@@ -27,7 +27,7 @@ export const JournalEntryDetail = () => {
     }, [])
 
     return (
-        <section className="journal-entry">
+        <section className="journal-entry-detail">
             <h3 className="entry-title">{entry.title}</h3>
             <div className="entry">{entry.text}</div>
             <div className="edit-delete-journal-entry">
@@ -35,8 +35,11 @@ export const JournalEntryDetail = () => {
                     history.push(`/entries/edit/${entry.id}`)
                 }}>Edit</button>
                 <button className="journal-entry-delete-button" onClick={handleDelete}>
-                    Delete{/* <i class="fas fa-trash-alt"></i> */}
+                    Delete
                 </button>
+                <Link className="journal-entry-close-button" to="/entries">
+                    Close
+                </Link>
             </div>
         </section>
     )

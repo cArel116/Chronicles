@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react"
 import { EntryContext } from "./JournalEntryProvider"
-import { useHistory, useParams } from 'react-router-dom';
+import { Link, useHistory, useParams } from 'react-router-dom';
 import "./Journal.css"
 
 export const JournalEntryForm = () => {
@@ -89,14 +89,18 @@ export const JournalEntryForm = () => {
                     <textarea type="text" id="text" required className="form-control journal-entry-text-field" placeholder="Once upon a time..." value={entry.text} onChange={handleControlledInputChange}></textarea>
                 </div>
             </fieldset>
-            <button className="btn btn-primary journal-entry-save"
-                disabled={isLoading}
-                onClick={e => {
-                    e.preventDefault()
-                    handleSaveEntry()
-                }}>
-                {entryId ? <>Save</> : <>New Entry</>}
-            </button>
+            <div className="save-close-button-div">
+                <button className="btn btn-primary journal-entry-save"
+                    disabled={isLoading}
+                    onClick={e => {
+                        e.preventDefault()
+                        handleSaveEntry()
+                    }}>Save
+                </button>
+                <Link className="journal-entry-close-button" to="/entries">
+                    Close
+                </Link>
+            </div>
         </form>
     )
 }

@@ -134,10 +134,27 @@
     align-items: center;
     justify-content: center;
     padding: 0;
-    margin: 0;
+    margin: 1em 0 0 0;
     border: none;
     background-color: transparent;
     cursor: pointer;
+}
+
+.search-add-entry-div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+    margin-top: 1em;
+}
+
+.input--wide {
+    margin: 1em 1em 0 0;
+    border-radius: 4px;
+    border: none;
+    padding: 4px 8px;
+    width: 200px;
+    font-family: Planewalker;
 }
 
 /* Tooltip container */
@@ -149,10 +166,11 @@
   /* Tooltip text */
   .newEntry-tooltip .tooltiptext {
     visibility: hidden;
-    width: 80px;
+    width: 100px;
     background-color: rgba(0,0,0,.5);
     color: #f2e9e9;
     font-family: Planewalker;
+    font-size: 18px;
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;
@@ -184,6 +202,7 @@
       align-items: center;
       justify-content: center;
       font-family: Planewalker;
+      font-size: 20px;
       color: #f2e9e9;
       text-shadow: 2px 2px 5px #000;
       height: 40px
@@ -200,6 +219,7 @@
     background-color: rgba(0,0,0,.5);
     color: #f2e9e9;
     font-family: Planewalker;
+    font-size: 18px;
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;
@@ -227,7 +247,7 @@
   }
 
 .fa-plus-square::before {
-    font-size: 16px;
+    font-size: 18px;
     color: #f2e9e9;
     margin: 0;
     width: 100%;
@@ -247,15 +267,71 @@
     height: 100%;
 }
 
-.journal-entry-delete-button {
+.edit-delete-journal-entry {
     display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+}
+
+.journal-entry-edit-button {
+    background-color: rgba(0,0,0,.5);
+    border: none;
+    font-family: Planewalker;
+    color: #f2e9e9;
+    font-size: 18px;
+    padding: 0;
+    cursor: pointer;
+    width: 70px;
+    max-width: 100px;
+    height: 40px;
+}
+
+.journal-entry-edit-button:hover {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.journal-entry-edit-button:active {
+    color: #f2e9e9;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+}
+
+.journal-entry-delete-button {
+    /* display: flex;
     align-items: center;
     justify-content: center;
     padding: 0;
     margin: 0;
     border: none;
     background-color: transparent;
+    cursor: pointer; */
+    background-color: rgba(0,0,0,.5);
+    border: none;
+    font-family: Planewalker;
+    color: #f2e9e9;
+    font-size: 18px;
+    padding: 0;
     cursor: pointer;
+    width: 70px;
+    max-width: 100px;
+    height: 40px;
+}
+
+.journal-entry-delete-button:hover {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.journal-entry-delete-button:active {
+    color: #f2e9e9;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
 }
 
 .journal-entry {
@@ -286,6 +362,7 @@ a.entry-title-link:hover {
     font-family: Planewalker;
     color: white;
     font-size: 22px;
+    font-weight: 400;
 }
 
 a.entry-title-link:active {
@@ -296,9 +373,56 @@ a.entry-title-link:active {
 
 .entry {
     font-family: Planewalker;
+    font-size: 18px;
     color: #f2e9e9;
     padding: 0px 10px 0px 0px;
     text-shadow: 2px 2px 5px #000;
+    margin-bottom: 1em;
+}
+
+/* ------------------JOURNAL ENTRY FORM---------------------- */
+.journalEntryForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+.journal-entry-text-field {
+    min-height: 200px;
+    min-width: 400px;
+    margin-bottom: 1em;
+}
+
+.journal-entry-title-field {
+    min-width: 400px;
+}
+
+.journal-entry-save {
+    background-color: rgba(0,0,0,.5);
+    border: none;
+    font-family: Planewalker;
+    color: #f2e9e9;
+    font-size: 20px;
+    padding: 0;
+    cursor: pointer;
+    width: 75px;
+    max-width: 100px;
+    height: 40px;
+}
+
+.journal-entry-save:hover {
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.journal-entry-save:active {
+    color: #f2e9e9;
+    font-size: 20px;
+    font-weight: 400;
+    border: none;
 }
 
 /* ------------------- JOURNAL MAIN PAGE ----------------------- */

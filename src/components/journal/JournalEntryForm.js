@@ -1,25 +1,17 @@
 import React, { useContext, useEffect, useState } from "react"
 import { EntryContext } from "./JournalEntryProvider"
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import "./Journal.css"
 
 export const JournalEntryForm = () => {
-    const { addEntry } = useContext(EntryContext)
+    const { addEntry, getEntryById, editEntry } = useContext(EntryContext)
 
-    /*
-    With React, we do not target the DOM with `document.querySelector()`. Instead, our return (render) reacts to state or props.
-  
-    Define the intial state of the form inputs with useState()
-    */
+    const [entry, setEntry] = useState({})
+    const [isLoading, setIsLoading] = useState(true);
 
-    const [entry, setEntry] = useState({
-        title: "",
-        text: ""
-    });
-
+    const { entryId } = useParams();
     const history = useHistory();
 
-    //when a field changes, update state. The return will re-render and display based on the values in state
     //Controlled component
     const handleControlledInputChange = (e) => {
         /* When changing a state object or array,
@@ -33,38 +25,78 @@ export const JournalEntryForm = () => {
         setEntry(newEntry)
     }
 
-    const handleClickSaveEntry = (e) => {
-        e.preventDefault() //Prevents the browser from submitting the form
+    // const handleClickSaveEntry = (e) => {
+    //     e.preventDefault() //Prevents the browser from submitting the form
 
 
-        //Invoke addEntry passing the new entry object as an argument
-        //Once complete, change the url and display the entry list
+    //     //Invoke addEntry passing the new entry object as an argument
+    //     //Once complete, change the url and display the entry list
 
-        const newEntry = {
-            title: entry.title,
-            text: entry.text
+    //     const newEntry = {
+    //         title: entry.title,
+    //         text: entry.text
+    //     }
+    //     addEntry(newEntry)
+    //         .then(() => history.push("/entries"))
+
+    // }
+
+    const handleSaveEntry = () => {
+        //disable the button - no extra clicks
+        setIsLoading(true);
+        if (entryId) {
+            //PUT - update
+            editEntry({
+                id: entry.id,
+                title: entry.title,
+                text: entry.text
+            })
+                .then(() => history.push(`/entries/detail/${entry.id}`))
+        } else {
+            //POST - add
+            addEntry({
+                title: entry.title,
+                text: entry.text
+            })
+                .then(() => history.push("/entries"))
         }
-        addEntry(newEntry)
-            .then(() => history.push("/entries"))
-
     }
+
+    //   If entryId is in the URL, getEntryById
+    useEffect(() => {
+
+        if (entryId) {
+            getEntryById(entryId)
+                .then(entry => {
+                    setEntry(entry)
+                    setIsLoading(false)
+                })
+        } else {
+            setIsLoading(false)
+        }
+    }, [])
 
     return (
         <form className="journalEntryForm">
 
             <fieldset>
                 <div className="form-group">
-                    <input type="text" id="title" required autoFocus className="form-control" placeholder="Entry Title" value={entry.title} onChange={handleControlledInputChange} />
+                    <input type="text" id="title" required autoFocus className="form-control journal-entry-title-field" placeholder="Entry Title" value={entry.title} onChange={handleControlledInputChange} />
                 </div>
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <textarea type="text" id="text" required className="form-control" placeholder="Once upon a time..." value={entry.text} onChange={handleControlledInputChange}></textarea>
+                    <textarea type="text" id="text" required className="form-control journal-entry-text-field" placeholder="Once upon a time..." value={entry.text} onChange={handleControlledInputChange}></textarea>
                 </div>
             </fieldset>
-            <button className="btn btn-primary" onClick={handleClickSaveEntry}>
-                Save
-          </button>
+            <button className="btn btn-primary journal-entry-save"
+                disabled={isLoading}
+                onClick={e => {
+                    e.preventDefault()
+                    handleSaveEntry()
+                }}>
+                {entryId ? <>Save</> : <>New Entry</>}
+            </button>
         </form>
     )
 }

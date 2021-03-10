@@ -31,6 +31,9 @@ export const ApplicationViews = () => {
                 <Route exact path="/entries/detail/:entryId(\d+)">
                     <JournalEntryDetail />
                 </Route>
+                <Route exact path="/entries/edit/:entryId(\d+)">
+                    <JournalEntryForm />
+                </Route>
             </JournalEntryProvider>
         </>
     )

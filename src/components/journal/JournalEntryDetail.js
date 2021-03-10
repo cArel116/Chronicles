@@ -31,8 +31,11 @@ export const JournalEntryDetail = () => {
             <h3 className="entry-title">{entry.title}</h3>
             <div className="entry">{entry.text}</div>
             <div className="edit-delete-journal-entry">
+                <button className="journal-entry-edit-button" onClick={() => {
+                    history.push(`/entries/edit/${entry.id}`)
+                }}>Edit</button>
                 <button className="journal-entry-delete-button" onClick={handleDelete}>
-                    <i class="fas fa-trash-alt"></i>
+                    Delete{/* <i class="fas fa-trash-alt"></i> */}
                 </button>
             </div>
         </section>

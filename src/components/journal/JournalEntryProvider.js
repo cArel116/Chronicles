@@ -26,7 +26,7 @@ export const JournalEntryProvider = (props) => {
     }
 
     const getEntryById = (id) => {
-        return fetch(`http://localhost:8088/entries/${id}?_expand=adventurers`)
+        return fetch(`http://localhost:8088/entries/${id}`)
             .then(res => res.json())
     }
 

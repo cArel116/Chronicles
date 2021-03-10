@@ -54,15 +54,15 @@ export const JournalEntryForm = () => {
 
             <fieldset>
                 <div className="form-group">
-                    <input type="text" id="title" required autoFocus className="form-control" placeholder="Entry Title" value={entry.title} onChange={handleControlledInputChange} />
+                    <input type="text" id="title" required autoFocus className="form-control journal-entry-title-field" placeholder="Entry Title" value={entry.title} onChange={handleControlledInputChange} />
                 </div>
             </fieldset>
             <fieldset>
                 <div className="form-group">
-                    <textarea type="text" id="text" required className="form-control" placeholder="Once upon a time..." value={entry.text} onChange={handleControlledInputChange}></textarea>
+                    <textarea type="text" id="text" required className="form-control journal-entry-text-field" placeholder="Once upon a time..." value={entry.text} onChange={handleControlledInputChange}></textarea>
                 </div>
             </fieldset>
-            <button className="btn btn-primary" onClick={handleClickSaveEntry}>
+            <button className="btn btn-primary journal-entry-save" onClick={handleClickSaveEntry}>
                 Save
           </button>
         </form>

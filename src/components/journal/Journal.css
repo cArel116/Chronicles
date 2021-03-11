@@ -132,7 +132,7 @@
     margin: 2em 0;
     overflow: scroll;
     overflow-x: hidden;
-    height: 600px;
+    height: 35em;
     width: 50em;
     background-color: rgba(0,0,0,.25);
     padding: 20px 0 0 20px;
@@ -296,7 +296,7 @@ a.entry-title-link:visited {
 a.entry-title-link:hover {
     font-family: Planewalker;
     color: white;
-    font-size: 26px;
+    font-size: 25px;
     font-weight: 400;
 }
 

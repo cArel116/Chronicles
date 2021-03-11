@@ -30,36 +30,42 @@ export const JournalEntryList = () => {
     }, [searchTerms, entries])
 
     return (
-        <section className="journal-entry-wrapper">
-            <div className="search-add-entry-div">
-                <ul className="search-add-entry-ul">
-                    {/* <input type="text"
-                    className="input--wide"
-                    onKeyUp={(e) => setSearchTerms(e.target.value)}
-                    placeholder="Search Entries..." /> */}
+        <>
+            {/* <div className="searchModalWrapper">
+                <div className="searchModal">
+                    <input type="text"
+                        className="input--wide"
+                        onKeyUp={(e) => setSearchTerms(e.target.value)}
+                        placeholder="Search Entries..." />
+                    <span class="searchModalClose">&times;</span>
+                </div>
+            </div> */}
+            <section className="journal-entry-wrapper">
+                <div className="search-add-entry-div">
+                    <ul className="search-add-entry-ul">
+                        <li className="fa-icon-li">
+                            <button className="newEntry-tooltip" onClick={() => { history.push("/entries/create") }}>
+                                <i class="fas fa-plus-square">
+                                    <span className="tooltiptext">Add Entry</span>
+                                </i>
+                            </button>
+                        </li>
+                        <li className="fa-icon-li">
+                            <button className="entry-search" onClick={() => { history.push("/entries/create") }}>
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
 
-                    <li className="fa-icon-li">
-                        <button className="newEntry-tooltip" onClick={() => { history.push("/entries/create") }}>
-                            <i class="fas fa-plus-square">
-                                <span className="tooltiptext">Add Entry</span>
-                            </i>
-                        </button>
-                    </li>
-                    <li className="fa-icon-li">
-                        <button className="entry-search" onClick={() => { history.push("/entries/create") }}>
-                            <i class="fas fa-search"></i>
-                        </button>
-                    </li>
-                </ul>
-            </div>
-
-            <div className="entries">
-                {
-                    filteredEntries.map(entry => {
-                        return <JournalEntry key={entry.id} entry={entry} />
-                    })
-                }
-            </div>
-        </section>
+                <div className="entries">
+                    {
+                        filteredEntries.map(entry => {
+                            return <JournalEntry key={entry.id} entry={entry} />
+                        })
+                    }
+                </div>
+            </section>
+        </>
     )
 }

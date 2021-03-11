@@ -10,7 +10,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgba(85,85,85,.);
+    background: rgba(85,85,85,.3);
     cursor: pointer;
 }
 
@@ -129,10 +129,10 @@
 .entries {
     display: flex;
     flex-direction: column;
-    margin: 2em 0;
+    margin: 2em 2.5em 2em 0;
     overflow: scroll;
     overflow-x: hidden;
-    height: 600px;
+    height: 35em;
     width: 50em;
     background-color: rgba(0,0,0,.25);
     padding: 20px 0 0 20px;
@@ -158,6 +158,7 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+    /* transition: all .2s cubic-bezier(0, 1.26, .8, 1.28); */
 }
 
 .fa-plus-square::before {
@@ -199,14 +200,33 @@
     padding-inline-start: 10px;
 }
 
-/* .input--wide {
+.searchSliderWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* height: 200px;
+    width: 200px; */
+    margin-top: 32px;
+}
+
+.searchSlider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 16px; */
+    padding: 72px 0 34px 0;
+    background-color: rgba(0,0,0,.3);
+}
+
+.input--wide {
     opacity: 50%;
     border-radius: 4px;
     border: none;
     padding: 4px 8px 2px;
-    width: 200px;
+    width: 80%;
     font-family: Planewalker;
     font-size: 18px;
+    
 }
 
 .input--wide:hover {
@@ -214,7 +234,7 @@
     border-radius: 4px;
     border: none;
     padding: 4px 8px 2px;
-    width: 200px;
+    /* width: 200px; */
     font-family: Planewalker;
     font-size: 18px;
 }
@@ -224,10 +244,10 @@
     border-radius: 4px;
     border: none;
     padding: 4px 8px 2px;
-    width: 200px;
+    /* width: 200px; */
     font-family: Planewalker;
     font-size: 18px;
-} */
+}
 
 /* Tooltip container */
 .newEntry-tooltip {
@@ -296,7 +316,7 @@ a.entry-title-link:visited {
 a.entry-title-link:hover {
     font-family: Planewalker;
     color: white;
-    font-size: 26px;
+    font-size: 25px;
     font-weight: 400;
 }
 
@@ -705,3 +725,26 @@ a.entry-title-link:active {
 .achievements-p {
     margin: 0px;
 }
+
+/* The Modal (background) */
+.searchModalWrapper {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .searchModal {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }

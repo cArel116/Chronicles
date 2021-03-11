@@ -29,43 +29,70 @@ export const JournalEntryList = () => {
         }
     }, [searchTerms, entries])
 
+    // SEARCH SLIDER-------------------------
+    // constructor(props, context) {
+    //     super(props, context);
+
+    //     this.state = {
+    //         visible: false
+    //     };
+
+    //     this.handleMouseDown = this.handleMouseDown.bind(this);
+    //     this.toggleMenu = this.toggleMenu.bind(this);
+    // }
+
+    // handleMouseDown(e) {
+    //     this.toggleMenu();
+
+    //     console.log("clicked");
+    //     e.stopPropagation();
+    // }
+
+    // toggleMenu() {
+    //     this.setState({
+    //         visible: !this.state.visible
+    //     });
+    // }
+
     return (
-        <>
-            {/* <div className="searchModalWrapper">
-                <div className="searchModal">
+
+        <section className="journal-entry-wrapper">
+            <div className="search-add-entry-div">
+                <ul className="search-add-entry-ul">
+                    <li className="fa-icon-li">
+                        <button className="newEntry-tooltip" onClick={() => { history.push("/entries/create") }}>
+                            <i class="fas fa-plus-square">
+                                <span className="tooltiptext">Add Entry</span>
+                            </i>
+                        </button>
+                    </li>
+                    <li className="fa-icon-li">
+                        <button className="entry-search"
+                            onClick={() => { history.push("/entries/create") }}>
+                            {/* onMouseDown={this.props.handleMouseDown}> */}
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div >
+
+            {/* <div className="searchSliderWrapper">
+                <div className="searchSlider">
                     <input type="text"
                         className="input--wide"
                         onKeyUp={(e) => setSearchTerms(e.target.value)}
                         placeholder="Search Entries..." />
-                    <span class="searchModalClose">&times;</span>
                 </div>
             </div> */}
-            <section className="journal-entry-wrapper">
-                <div className="search-add-entry-div">
-                    <ul className="search-add-entry-ul">
-                        <li className="fa-icon-li">
-                            <button className="newEntry-tooltip" onClick={() => { history.push("/entries/create") }}>
-                                <i class="fas fa-plus-square">
-                                    <span className="tooltiptext">Add Entry</span>
-                                </i>
-                            </button>
-                        </li>
-                        <li className="fa-icon-li">
-                            <button className="entry-search" onClick={() => { history.push("/entries/create") }}>
-                                <i class="fas fa-search"></i>
-                            </button>
-                        </li>
-                    </ul>
-                </div>
 
-                <div className="entries">
-                    {
-                        filteredEntries.map(entry => {
-                            return <JournalEntry key={entry.id} entry={entry} />
-                        })
-                    }
-                </div>
-            </section>
-        </>
+            < div className="entries" >
+                {
+                    filteredEntries.map(entry => {
+                        return <JournalEntry key={entry.id} entry={entry} />
+                    })
+                }
+            </div >
+        </section >
+
     )
 }

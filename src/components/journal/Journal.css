@@ -10,7 +10,7 @@
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgba(85,85,85,.1);
+    background: rgba(85,85,85,.);
     cursor: pointer;
 }
 
@@ -118,12 +118,24 @@
     font-size: 20px;
 }
 
+.journal-entry-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-width: 40em;
+    min-height: 100%;
+}
+
 .entries {
     display: flex;
     flex-direction: column;
+    margin: 2em 0;
     overflow: scroll;
     overflow-x: hidden;
-    margin-top: 2em;
+    height: 600px;
+    width: 50em;
+    background-color: rgba(0,0,0,.25);
+    padding: 20px 0 0 20px;
 }
 
 .newEntry-tooltip {
@@ -131,7 +143,18 @@
     align-items: center;
     justify-content: center;
     padding: 0;
-    /* margin: 1em 0 0 0; */
+    margin: 20px 10px 10px 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.entry-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 10px 10px 20px 10px;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -145,16 +168,39 @@
     height: 100%;
 }
 
-.search-add-entry-div {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    min-width: 300px;
-    margin-top: 2em;
+.fa-search::before {
+    font-size: 18px;
+    color: #f2e9e9;
+    width: 100%;
+    height: 100%;
 }
 
-.input--wide {
-    /* margin: 1em 0 0 0; */
+.fa-plus-square::before:hover {
+    opacity: 80%;
+    color: white;
+}
+
+.search-add-entry-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color:  rgba(0,0,0,.3);
+    min-width: 40px;
+    min-height: 50px;
+    margin-top: 2em;
+    border-radius: 10px 0 0 10px;
+    /* min-width: 32em; */
+    /* margin-top: 2em;
+    padding-right: 20px; */
+}
+
+.search-add-entry-ul {
+    padding-inline-start: 10px;
+}
+
+/* .input--wide {
+    opacity: 50%;
     border-radius: 4px;
     border: none;
     padding: 4px 8px 2px;
@@ -162,6 +208,26 @@
     font-family: Planewalker;
     font-size: 18px;
 }
+
+.input--wide:hover {
+    opacity: 80%;
+    border-radius: 4px;
+    border: none;
+    padding: 4px 8px 2px;
+    width: 200px;
+    font-family: Planewalker;
+    font-size: 18px;
+}
+
+.input--wide:focus {
+    opacity: 80%;
+    border-radius: 4px;
+    border: none;
+    padding: 4px 8px 2px;
+    width: 200px;
+    font-family: Planewalker;
+    font-size: 18px;
+} */
 
 /* Tooltip container */
 .newEntry-tooltip {
@@ -184,7 +250,7 @@
     position: absolute;
     z-index: 1;
     top: -5px;
-    left: 130%;
+    right: 130%;
 }
 
 .newEntry-tooltip .tooltiptext::after {
@@ -224,7 +290,7 @@ a.entry-title-link:link {
 
 a.entry-title-link:visited {
     font-family: Planewalker;
-    color: #777;
+    color: #f2e9e9;
 }
 
 a.entry-title-link:hover {
@@ -287,11 +353,6 @@ a.entry-title-link:active {
     text-shadow: 2px 2px 5px #000;
     margin-bottom: 1em;
 }
-
-/* .fa-plus-square::before:hover {
-    font-size: 18px;
-    color: white;
-} */
 
 .edit-delete-journal-entry {
     display: flex;
@@ -390,7 +451,6 @@ a.entry-title-link:active {
     align-items: center;
     justify-content: center;
     
-    width: 32em;
     text-align: justify;
 
     padding: 10px;

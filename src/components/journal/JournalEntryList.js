@@ -30,17 +30,27 @@ export const JournalEntryList = () => {
     }, [searchTerms, entries])
 
     return (
-        <>
+        <section className="journal-entry-wrapper">
             <div className="search-add-entry-div">
-                <input type="text"
+                <ul className="search-add-entry-ul">
+                    {/* <input type="text"
                     className="input--wide"
                     onKeyUp={(e) => setSearchTerms(e.target.value)}
-                    placeholder="Search Entries..." />
-                <button className="newEntry-tooltip" onClick={() => { history.push("/entries/create") }}>
-                    <i class="fas fa-plus-square">
-                        <span className="tooltiptext">Add Entry</span>
-                    </i>
-                </button>
+                    placeholder="Search Entries..." /> */}
+
+                    <li className="fa-icon-li">
+                        <button className="newEntry-tooltip" onClick={() => { history.push("/entries/create") }}>
+                            <i class="fas fa-plus-square">
+                                <span className="tooltiptext">Add Entry</span>
+                            </i>
+                        </button>
+                    </li>
+                    <li className="fa-icon-li">
+                        <button className="entry-search" onClick={() => { history.push("/entries/create") }}>
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </li>
+                </ul>
             </div>
 
             <div className="entries">
@@ -50,6 +60,6 @@ export const JournalEntryList = () => {
                     })
                 }
             </div>
-        </>
+        </section>
     )
 }

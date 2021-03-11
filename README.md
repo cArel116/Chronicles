@@ -1,71 +1,55 @@
-# Getting Started with Create React App
+# Chronicles
+### Final Capstone Project | February 2021 
+#### Version 1.0
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## General Usage Notes
 
-In the project directory, you can run:
+* Clone the repo to begin.
+* Run `npm install` in the chronicles root directory.
+* Start JSON Server by typing the following command from the but-first root directory: `json-server -p * 8088 -w database.json`
+* Run `npm start` to view application in browser.
+* IMPORTANT: This is meant as a Desktop app and has been formatted as such. There is NO mobile version to date. For the best and intended experience, please view on Desktop View via your Developer Tools.
+* Begin by registering as a new user. User data will remain on your local machine.
 
-### `npm start`
+Note: Login and Registration is NOT secure and should be used for DEMO purposes only.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Table of Contents
 
-### `npm test`
+* Intro
+* Overview
+* Project Goals
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Intro
+How many separate apps do you use in your day? From personal apps to social, scheduling to managing photos, videos, etc., Chronicles is a Desktop application aimed at bringing ALL of those to one place (the scope of this project only covers registration/login, homepage, and journal posts with CRUD capabilities).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Overview
+Chronicle is an app that currently allows every user to:
+1. Register a new account.
+2. Login.
+3. Navigate between Home page, Journal, and Journal Entries (Quill).
+4. Create, Edit, and Delete new and existing journal entries, as well as search all entries by keyword.
+5. Logout.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Version 2.0+
+1.	Manage, organize, and record every moment of their life via journal entries, digital media, email & calendar syncronization, etc.
+2.	See the current date and weather on the homepage.
+3.	Customize the appearance of the app (background images, color-scheme, etc.) to their own personal liking.
+4.	Upload photos, video, etc. via the Media section.
+5.	Sync social media apps to one place via the Social page.
+6.	Catalogue life's many adventures in a unique, personalized, and intuitive way via the Adventures section.
+7.	Set personal goals and record achievements in the Goals & Achievements section.
+Each user can navigate each section of the app seamlessly via the navigation bar fixed at the top of each page.  There is also a settings icon that allows the user to customize their app/experience.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Project Goals
+My MVP (minimum viable product) goals for this project were to accomplish the following:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# chronicles
+* User login/registration.
+* Create and esthetically pleasing design.
+* User-specific CRUD (Create, Read, Update, Delete) as it relates to journal entries. 
+* Search journal entries by keyword. 
+* Logout.
